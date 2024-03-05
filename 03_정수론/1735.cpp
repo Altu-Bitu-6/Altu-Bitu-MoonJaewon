@@ -28,7 +28,7 @@ int main(){
     a*=(LCM/b);
     m*=(LCM/n);
     
-    cout << a+m <<"  "<< LCM;
+    cout << a+m <<" "<< LCM;
 
    return 0;  
 

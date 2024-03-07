@@ -5,7 +5,7 @@ using namespace std;
 
 //최대공약수 구하기
 int getGCD(int a, int b){
-    for(int i=min(a,b); i>0; i++){
+    for(int i=min(a,b); i>0; i--){
         if(a%i==0 && b%i==0){
             return i;
         }
@@ -27,8 +27,14 @@ int main(){
 
     a*=(LCM/b);
     m*=(LCM/n);
+
+    int sum=a+m;
+    GCD=getGCD(sum,LCM);
+    sum/=GCD;
+    LCM/=GCD;
     
-    cout << a+m <<" "<< LCM;
+    
+    cout << sum <<" "<< LCM;
 
    return 0;  
 
